@@ -14,3 +14,4 @@ The web service has the following admistrative endpoints:
 ----
 
 [![Build Status](https://travis-ci.org/jpsecher/node-service.svg?branch=master)](https://travis-ci.org/jpsecher/node-service)
+[![Docker build status](https://img.shields.io/docker/build/jpsecher/node-service.svg)](https://hub.docker.com/r/jpsecher/node-service/builds/)
