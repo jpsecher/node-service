@@ -1,0 +1,32 @@
+{ "build_systems":
+  [ { "name": "node-service"
+    , "cmd": ["npm","run","test","--silent"]
+    , "file_regex": "^([^\n:]+):([0-9]+):([0-9]+): (.*)$"
+    , "working_dir": "${project_path}/src"
+    , "variants":
+      [ { "name": "unittest"
+        , "cmd": ["npm","run","unittest","--silent"]
+        }
+      , { "name": "coverage"
+        , "cmd": ["npm","run","coverage","--silent"]
+        }
+      , { "name": "lint"
+        , "cmd": ["npm","run","lint","--silent"]
+        , "file_regex": "^  ([^\n:]+):([0-9]+):([0-9]+): (.*)$"
+        }
+      ]
+    }
+  ]
+, "folders":
+  [ { "path": "."
+    , "folder_exclude_patterns":
+      [ "src/node_modules"
+      , "src/coverage"
+      ]
+    , "file_exclude_patterns":
+      [ "src/npm-debug.log"
+      , "src/server/config.js"
+      ]
+    }
+  ]
+}
