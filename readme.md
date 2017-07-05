@@ -11,3 +11,6 @@ The web service has the following admistrative endpoints:
 | `/status` | Returns the service status as JSON |
 | `/pid`    | Returns the service's process id   |
 
+----
+
+[![Build Status](https://travis-ci.org/jpsecher/node-service.svg?branch=master)](https://travis-ci.org/jpsecher/node-service)
