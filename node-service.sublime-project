@@ -17,6 +17,11 @@
       ]
     }
   ]
+, "SublimeLinter":
+  { "linters":
+    { "standard": { "@disable": false }
+    }
+  }
 , "folders":
   [ { "path": "."
     , "folder_exclude_patterns":
