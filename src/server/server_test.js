@@ -3,9 +3,9 @@
 
 const expect = require('chai').expect
 const request = require('supertest')
-const app = require('server')
 
 describe('service meta API', () => {
+  const app = require('server')
   describe('status', () => {
     it('should return a JSON structure with version and address', done => {
       request(app)

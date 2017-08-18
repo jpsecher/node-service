@@ -5,7 +5,7 @@ FROM node:alpine AS base
 RUN apk add --no-cache nodejs-current tini
 ENV HOME=/home/app
 RUN addgroup -S app && \
-	adduser -S -h $HOME -s /bin/false -G app app
+    adduser -S -h $HOME -s /bin/false -G app app
 USER app
 WORKDIR $HOME
 ENTRYPOINT ["/sbin/tini", "--"]
@@ -16,7 +16,7 @@ ENTRYPOINT ["/sbin/tini", "--"]
 FROM base AS production-dependencies
 COPY src/package.json src/setup-node-env.sh ./
 RUN touch config.js && \
-	mkdir server lib && \
+    mkdir server lib && \
     npm set progress=false && \
     npm config set depth 0 && \
     npm install --only=production
@@ -35,7 +35,7 @@ USER app
 FROM test-base AS test-dependencies
 RUN npm set progress=false && \
     npm config set depth 0 && \
-	npm install
+    npm install
 
 ##
 ## Test
